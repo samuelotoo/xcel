@@ -29,7 +29,7 @@ export default function AboutUs() {
             src={about}
             width={500}
             height={500}
-            className="w-full md:h-[550px] xl:h-[900px]"
+            className="w-full md:h-[550px] 2xl:h-[900px]"
             alt="About Us"
           />
         </PageWrapper>
