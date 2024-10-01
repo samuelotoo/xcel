@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import pconsult from "../components/pconsult.png";
 
 import { SiWhatsapp } from "react-icons/si";
 import Link from "next/link";
@@ -8,17 +9,17 @@ export default function Pconsult() {
   return (
     <main>
       <div className="flex flex-col items-center ">
-        <div className="relative w-full sm:h-[470px]">
+      <div className="relative w-full sm:h-[470px] xl:h-[800px]">
           <div className="absolute -z-20 w-full">
             <Image
-              src="https://gdurl.com/5mea"
+              src={pconsult}
               width={300}
               height={300}
-              className="w-full sm:h-[525px] opacity-70"
+              className="w-full h-[525px] xl:h-[890px] opacity-70"
               alt="personal consultation"
             />
           </div>
-          <div className="mt-28 sm:mt-60 ml-10 sm:ml-20">
+          <div className="mt-28 xl:mt-80 sm:mt-60 ml-10 sm:ml-20">
             <div className="flex items-start mb-5">
               <h1 className="text-2xl md:text-4xl text-white ">
                 Personalized Consultation Offer{" "}

@@ -1,5 +1,6 @@
 import Image from "next/image";
-
+import logo from "../aboutus/logo.avif";
+import about from "../aboutus/about.png";
 import React from "react";
 import PageWrapper from "../components/page-wrapper";
 
@@ -14,7 +15,7 @@ export default function AboutUs() {
         <PageWrapper>
           <div className="absolute  pl-10 pt-5 flex items-center ">
             <Image
-              src="https://gdurl.com/9Z9v"
+              src={logo}
               width={100}
               height={50}
               className=" w-24 sm:w-36 "
@@ -25,10 +26,10 @@ export default function AboutUs() {
         <PageWrapper>
           {" "}
           <Image
-            src="https://gdurl.com/phjM"
+            src={about}
             width={500}
             height={500}
-            className="w-full md:h-[550px]"
+            className="w-full md:h-[550px] xl:h-[900px]"
             alt="About Us"
           />
         </PageWrapper>

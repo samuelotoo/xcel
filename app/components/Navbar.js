@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-
+import xcel from "../components/xcel.avif";
 import Dropdown from "./dropdown";
 import { useState } from "react";
 import Dropside from "./dropside";
@@ -21,7 +21,7 @@ export default function Navbar() {
             <div className="flex-shrink-0">
               <Link href="/">
                 <Image
-                  src="https://gdurl.com/xxCS"
+                  src={xcel}
                   alt="Xcel logo"
                   width={150}
                   height={150}
@@ -55,7 +55,7 @@ export default function Navbar() {
           </div>
           <div className="md:hidden flex items-center">
             <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white  "
               onClick={toggleNavbar}
             >
               {isClick ? (
