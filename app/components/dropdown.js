@@ -23,32 +23,56 @@ export default function Dropdown() {
       {isOpen && (
         <div className="bg-white bg-opacity-40 text-black absolute top-14 rounded-lg p-2 w-[200px]">
           <div className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1">
-            <Link href="/pconsult" className=" text-black hover:text-black">
+            <Link
+              href="/pconsult"
+              className=" text-black hover:text-black"
+              onClick={() => setIsOpen((prev) => !prev)}
+            >
               Personalized Consultation
             </Link>
           </div>
           <div className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1">
-            <Link href="/unisec" className=" text-black hover:text-black">
+            <Link
+              href="/unisec"
+              className=" text-black hover:text-black"
+              onClick={() => setIsOpen((prev) => !prev)}
+            >
               University Selection
             </Link>
           </div>
           <div className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1">
-            <Link href="/appsup" className=" text-black hover:text-black">
+            <Link
+              href="/appsup"
+              className=" text-black hover:text-black"
+              onClick={() => setIsOpen((prev) => !prev)}
+            >
               Application Support
             </Link>
           </div>
           <div className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1">
-            <Link href="/visa" className=" text-black hover:text-black">
+            <Link
+              href="/visa"
+              className=" text-black hover:text-black"
+              onClick={() => setIsOpen((prev) => !prev)}
+            >
               Visa Assistance
             </Link>
           </div>
           <div className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1">
-            <Link href="/blocked" className=" text-black hover:text-black">
+            <Link
+              href="/blocked"
+              className=" text-black hover:text-black"
+              onClick={() => setIsOpen((prev) => !prev)}
+            >
               Blocked Account Consultation
             </Link>
           </div>
           <div className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1">
-            <Link href="/departure" className=" text-black hover:text-black">
+            <Link
+              href="/departure"
+              className=" text-black hover:text-black"
+              onClick={() => setIsOpen((prev) => !prev)}
+            >
               Pre-Departure Guidance
             </Link>
           </div>

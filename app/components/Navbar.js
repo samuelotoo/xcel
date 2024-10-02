@@ -4,10 +4,11 @@ import Link from "next/link";
 import xcel from "../components/xcel.avif";
 import Dropdown from "./dropdown";
 import { useState } from "react";
-import Dropside from "./dropside";
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
 export default function Navbar() {
   const [isClick, setIsClick] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
     setIsClick(!isClick);
@@ -16,7 +17,7 @@ export default function Navbar() {
   return (
     <nav>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between md:gap-0 -mr-20 md:-mr-0 h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/">
@@ -98,19 +99,112 @@ export default function Navbar() {
               <Link
                 href="/"
                 className="text-white block  hover:bg-white hover:text-black rounded-lg p-2"
+                onClick={toggleNavbar}
               >
                 Home
               </Link>
               <Link
                 href="/aboutus"
                 className="text-white block  hover:bg-white hover:text-black rounded-lg p-2"
+                onClick={toggleNavbar}
               >
                 About Us
               </Link>
-              <Dropside />
+              <div>
+                <div className="relative inline-block text-left ">
+                  <button
+                    className="  inline-flex w-full justify-center  text-white hover:bg-white hover:text-black rounded-lg "
+                    onClick={() => setIsOpen((prev) => !prev)}
+                  >
+                    Our Services
+                    {!isOpen ? (
+                      <AiFillCaretDown className="h-8" />
+                    ) : (
+                      <AiFillCaretUp className="h-8" />
+                    )}
+                  </button>
+                  {isOpen && (
+                    <div className="bg-white bg-opacity-40 text-black absolute -top-24 left-32 rounded-lg p-2 w-[200px]">
+                      <div
+                        className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1"
+                        onClick={() => setIsOpen((prev) => !prev)}
+                      >
+                        <Link
+                          href="/pconsult"
+                          className=" text-black hover:text-black"
+                          onClick={toggleNavbar}
+                        >
+                          Personalized Consultation
+                        </Link>
+                      </div>
+                      <div
+                        className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1"
+                        onClick={() => setIsOpen((prev) => !prev)}
+                      >
+                        <Link
+                          href="/unisec"
+                          className=" text-black hover:text-black"
+                          onClick={toggleNavbar}
+                        >
+                          University Selection
+                        </Link>
+                      </div>
+                      <div
+                        className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1"
+                        onClick={() => setIsOpen((prev) => !prev)}
+                      >
+                        <Link
+                          href="/appsup"
+                          className=" text-black hover:text-black"
+                          onClick={toggleNavbar}
+                        >
+                          Application Support
+                        </Link>
+                      </div>
+                      <div
+                        className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1"
+                        onClick={() => setIsOpen((prev) => !prev)}
+                      >
+                        <Link
+                          href="/visa"
+                          className=" text-black hover:text-black"
+                          onClick={toggleNavbar}
+                        >
+                          Visa Assistance
+                        </Link>
+                      </div>
+                      <div
+                        className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1"
+                        onClick={() => setIsOpen((prev) => !prev)}
+                      >
+                        <Link
+                          href="/blocked"
+                          className=" text-black hover:text-black"
+                          onClick={toggleNavbar}
+                        >
+                          Blocked Account Consultation
+                        </Link>
+                      </div>
+                      <div
+                        className="text-[14px] w-full justify-center hover:bg-white hover:border-l-black hover:border-l-2 rounded-r-lg p-1"
+                        onClick={() => setIsOpen((prev) => !prev)}
+                      >
+                        <Link
+                          href="/departure"
+                          className=" text-black hover:text-black"
+                          onClick={toggleNavbar}
+                        >
+                          Pre-Departure Guidance
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
               <Link
                 href="/contact"
                 className="text-white block  hover:bg-white hover:text-black rounded-lg p-2"
+                onClick={toggleNavbar}
               >
                 Contact Us
               </Link>
